@@ -27,7 +27,7 @@ time_to_live = "8760h"
 
 [database]
   backend = "sqlite3"
-  passphrase = "OmIdt1psM8dwS9GlYoLsN4tN4Yn0GMBHtiqVumljxap33vTptG6iyNBXOpLwg21Y"
+  passphrase = "UPkxj0NlOSJ3k5Frh0j7DF74Z22XIxWb"
   [database.sqlite3]
     db_file = "/etc/garm/garm.db"
 

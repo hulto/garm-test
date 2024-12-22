@@ -1,5 +1,5 @@
 project_id = "garm-testing"
-zone = "europe-west1-d"
+zone = "us-central1-a"
 network_id = "projects/garm-testing/global/networks/garm"
 subnetwork_id = "projects/garm-testing/regions/europe-west1/subnetworks/garm"
 # The credentials file is optional.

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker run -d \
+docker run --rm \
   --name garm \
   -p 8080:80 \
   -v ./etc/garm:/etc/garm:rw \
