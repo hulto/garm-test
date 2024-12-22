@@ -1,0 +1,41 @@
+[default]
+enable_webhook_management = true
+
+[logging]
+# If using nginx, you'll need to configure connection upgrade headers
+# for the /api/v1/ws location. See the sample config in the testdata
+# folder.
+enable_log_streamer = true
+# Set this to "json" if you want to consume these logs in something like
+# Loki or ELK.
+log_format = "text"
+log_level = "info"
+log_source = false
+
+[metrics]
+enable = true
+disable_auth = false
+
+[jwt_auth]
+secret = "urUBOMNo73spL6IafIgM1lJDLcEy0oLJG5HuPROaIU3tnNfgceFSL35UkGZRKHxx"
+time_to_live = "8760h"
+
+[apiserver]
+  bind = "0.0.0.0"
+  port = 80
+  use_tls = false
+
+[database]
+  backend = "sqlite3"
+  passphrase = "OmIdt1psM8dwS9GlYoLsN4tN4Yn0GMBHtiqVumljxap33vTptG6iyNBXOpLwg21Y"
+  [database.sqlite3]
+    db_file = "/etc/garm/garm.db"
+
+[[provider]]
+  name = "gcp"
+  provider_type = "external"
+  description = "gcp provider"
+  [provider.external]
+    provider_executable = "/opt/garm/providers.d/garm-provider-gcp"
+    config_file = "/etc/garm/garm-provider-gcp.toml"
+    # This is needed if you want GARM to pass this along to the provider.

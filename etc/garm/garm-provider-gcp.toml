@@ -1,0 +1,8 @@
+project_id = "garm-testing"
+zone = "europe-west1-d"
+network_id = "projects/garm-testing/global/networks/garm"
+subnetwork_id = "projects/garm-testing/regions/europe-west1/subnetworks/garm"
+# The credentials file is optional.
+# Leave this empty if you want to use the default credentials.
+credentials_file = "/etc/garm/service-account-key.json"
+external_ip_access = true
