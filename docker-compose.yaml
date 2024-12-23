@@ -1,0 +1,15 @@
+services:
+  garm-server:
+    hostname: garm-server
+    image: garm:v0.1.5-51-gf43f797
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - ./etc/garm:/etc/garm:rw
+  caddy:
+    image: docker.io/library/caddy:2.9-alpine@sha256:9cc41f26f734861421d99f00fc962b3a3181aab9b4dbd0ac7751a883623794b6
+    command: caddy run --config /data/Caddyfile --adapter caddyfile
+    volumes:
+      - ./caddy:/data:rw
+    ports:
+      - "443:443"
+    

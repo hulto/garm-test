@@ -1,0 +1,3 @@
+garm.galaxygridlabs.com {
+    reverse_proxy garm-server:80
+}
