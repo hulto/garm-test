@@ -16,4 +16,4 @@ jobs:
           fi
       - name: Test
         run: |
-          ls -lah / && hostname && curl ifconfig.me && cat /imagegeneration
+          sleep 300
