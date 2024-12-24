@@ -16,4 +16,4 @@ jobs:
           fi
       - name: Test
         run: |
-          sleep 300
+          hostname
