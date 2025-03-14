@@ -17,4 +17,7 @@ jobs:
           fi
       - name: Test
         run: |
-          hostname
+          hostname      
+      - name: Test
+        run: |
+          ps -aux
