@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   check-equality:
-    runs-on: openstack
+    runs-on: gcp
     steps:
       - name: Check if 1 equals 1
         run: |
