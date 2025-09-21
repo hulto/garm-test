@@ -21,3 +21,6 @@ jobs:
       - name: Test
         run: |
           whoami
+      - name: IP test
+        run: |
+          ifconfig.io
