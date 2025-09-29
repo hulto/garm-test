@@ -10,7 +10,7 @@ jobs:
         run: |
           if [ 1 -eq 1 ]; then
             echo "1 equals 1"
-            echo "Win"
+            echo "Win!"
           else
             echo "1 does not equal 1"
             exit 1
